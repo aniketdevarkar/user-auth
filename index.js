@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+var cors = require("cors");
 const mongodb = require("mongodb");
 const bcrypt = require("bcrypt");
 const app = express();
@@ -12,6 +13,7 @@ const port = process.env.PORT || 4000;
 const dbUrl = process.env.DB_URL || "mongodb://127.0.0.27017";
 
 app.use(express.json());
+app.use(cors());
 
 app.get("/", async (req, res) => {
   try {
