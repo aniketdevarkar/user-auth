@@ -7,7 +7,7 @@ const app = express();
 const mongoClient = mongodb.MongoClient;
 const objectId = mongoClient.objectId;
 
-const port = process.env.port || 4000;
+const port = process.env.PORT || 4000;
 
 const dbUrl = process.env.DB_URL || "mongodb://127.0.0.27017";
 
